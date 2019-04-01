@@ -19,8 +19,10 @@ function homePage(req, res) {
   request('http://mirabeau.denniswegereef.nl/api/v1/rooms', (error, response, body) => {
     console.log('error:', error)
     console.log('statusCode:', response && response.statusCode)
-    console.log('body:', body)
-  })
+    // console.log('body:', body)
 
-  res.render('pages/index.ejs')
+    let data = JSON.parse(body)
+
+    res.render('pages/index.ejs', {data: data.data})
+  })
 }
