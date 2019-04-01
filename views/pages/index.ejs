@@ -3,10 +3,16 @@
 <main>
   <% data.forEach(room => { %>
     <article>
-      <h2><%= room.room_name %></h2>
-      <p>Beschikbaarheid: <%= room.measurements.occupancy %></p>
-      <p>Geluid: <%= room.measurements.mic_level %></p>
-      <p>Licht: <%= room.measurements.ambient_light %></p>
+      <header>
+        <h2><%= room.room_name %></h2>
+        <% if (room.measurements.occupancy === true) { %>
+          <i class="fas fa-circle fa-circle-red"></i>
+        <% } else { %>
+          <i class="fas fa-circle fa-circle-green"></i>
+        <% } %>
+      </header>
+      <p><i class="fas fa-volume-up"></i> <%= room.measurements.mic_level %></p>
+      <p><i class="fas fa-sun"></i> <%= room.measurements.ambient_light %></p>
     </article>
   <% }) %>
 </main>
