@@ -1,0 +1,46 @@
+/* ---------- COLORS ---------- */
+/* GREEN: #56c271 */
+/* BLACK: #24282a */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: sans-serif;
+  color: #24282a;
+}
+
+main {
+  padding: 1em 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1em;
+  width: 100%;
+  height: 10vh;
+  background-color: #56c271;
+}
+
+header > h2 {
+  color: #ffffff;
+}
+
+article {
+  margin: 1em 0;
+  padding: 1em;
+  border-top: 1px solid #24282a;
+  border-bottom: 1px solid #24282a;
+}
+
+article:first-child {
+  margin-top: 0;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
