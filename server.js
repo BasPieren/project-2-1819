@@ -2,6 +2,7 @@
 
 const express = require('express'),
       request = require('request'),
+      compression = require('compression'),
       app = express(),
       port = 3000
 
@@ -10,6 +11,7 @@ app
   .set('views', 'views')
 
   .use(express.static('public'))
+  .use(compression())
 
   .get('/', homePage)
 
