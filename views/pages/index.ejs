@@ -1,7 +1,14 @@
 <% include ../partials/header %>
 
 <main>
-  <h1>Hello World!</h1>
+  <% data.forEach(room => { %>
+    <article>
+      <h2><%= room.room_name %></h2>
+      <p>Beschikbaarheid: <%= room.measurements.occupancy %></p>
+      <p>Geluid: <%= room.measurements.mic_level %></p>
+      <p>Licht: <%= room.measurements.ambient_light %></p>
+    </article>
+  <% }) %>
 </main>
 
 <% include ../partials/footer %>
