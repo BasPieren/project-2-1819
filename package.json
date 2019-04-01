@@ -1,0 +1,27 @@
+{
+  "name": "project-2-1819",
+  "version": "1.0.0",
+  "description": "## Aanbevelingen voor een robuste, toegankelijke en snelle web toepassing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BasPieren/project-2-1819.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BasPieren/project-2-1819/issues"
+  },
+  "homepage": "https://github.com/BasPieren/project-2-1819#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "request": "^2.88.0"
+  }
+}

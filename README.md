@@ -1,36 +1,66 @@
-# Project 2 @cmda-minor-web · 2018-2019
+# README Template ⚙️
 
-## Aanbevelingen voor een robuste, toegankelijke en snelle web toepassing
+This is my personal `README.md` template. This template contains all possible chapters that I could need during a school or personal project. Chapters can be moved & removed as needed.
 
-Het project vindt plaats bij in ons eigen lokaal. Maandagochtend is om 9.30 uur de kickoff (bij de oprachtgever), vrijdag zijn de presentaties van de resultaten (bij de opdrachtgever). In een week bouwt iedere student een eigen prototype ter onderbouwing van aanbevelingen aan de opdrachtgevers (Valtech, Mirabeau & CMD Amsterdam). De aanbevelingen betreffen het verbeteren van toegankelijkheid en performance van de web sites / applicaties. Technieken geleerd bij [Browser Technologies](https://github.com/cmda-minor-web/browser-technologies-1819) en [Performance Matters](https://github.com/cmda-minor-web/performance-matters-1819) worden toegepast bij het bouwen van de de prototypes en et schrijven van de aanbevelingen.
+![Project Image](https://i.imgur.com/ZALRBjH.png)
+> Image description
 
-## Programma
-Maandag - 9.30 - kickoff
-Woensdag - voortgangbespreking
-Vrijdag presentatie
+## Table of Contents 🗃
+* [To Do](#to-do-)
+* [Description](#description-)
+* [Installing](#installing-)
+  * [Packages and Technologies](#packages-and-technologies)
+* [API](#api-)
+* [Research](#research-)
+* [How It Works](#how-it-works-️)
+* [Sources](#sources-)
+  * [Honourable Mentions](#honourable-mentions)
+* [Licence](#licence-)
 
-## Werkwijze en Criteria
-### Werkwijze
-Full-time week werken aan optimaliseren van toegankelijkheid en performance van een website. Vrijdag is de pitch! Student laat zien dat hij/zij de vakken [Browser Technologies](https://github.com/cmda-minor-web/browser-technologies-1819) en [Performance Matters](https://github.com/cmda-minor-web/performance-matters-1819) begrijpt en beheerst.
+## To Do 📌
+This is a list of things I want to do in this project:
 
-Iedere dag zijn er coaches aanwezig voor coaching en feedback. We sluiten de dag af met een stand up, om de status door te spreken. Waar ben je mee bezig? Loop je ergens vast of heb je hulp nodig? Waar sta je?
+- [ ] .
 
-### Beoordeling
-Tijdens de beoordeling krijg je feedback op het resultaat en op je functioneren. De vakdocenten kijken naar je code en beoordelen In hoeverre je in het project laten zien dat je de bijhorende vakken beheerst en goed hebt toegepast. De opdrachtgver is geïnteresseerd in hoeverre je oplossing voldoet aan de eisen die zijzelf stellen aan hun producten. Misschien laat je wel wat zien waar ze zelf nog niet aan gedacht hebben?
+## Description 📝
+*Here goes the description of a project.*
 
-Het project telt als AVV mee met de Meesterproef.
+## Installing 🔍
+To install this application enter the following into your terminal:
+```
+git clone https://github.com/BasPieren/readme-template.git
 
-### Feedback over functioneren
-Je hebt een leergierig, gedreven en zelfredzame houding nodig om de minor te kunnen halen. Welke vaardigheden heb je laten zien? Onderzoekend vermogen? Creativiteit? Conceptueel? In hoeverre komen je houding en verworven vaardigheden overeen met wat een frontender in de praktijk nodig heeft?
+cd readme-template
+```
 
-### Browser Technologies
-In het vak [Browser Technologies](https://github.com/cmda-minor-web/browser-technologies-1819)) heb je geleerd wat de core functionalitiet van een web toepassing is en hoe je deze functionaliteit met progressive enhancement kan opbouwen tot een robuste web teopassing. Ook heb je geleerd hoe hiermee de toegankelijkheid van een web toepassing kan worden verbeterd. 
+### Packages and Technologies
+This project makes use of the following packages and technologies:
 
-### Performance Matters
-In het vak [Performance Matters](https://github.com/cmda-minor-web/performance-matters-1819) heb je geleerd hoe je een web toepassing (ogenschijnlijk) sneller kan maken en ook offline kan laten werken. Hiermee verbeter je de gebruikservaring van de web toepassing in alle omstandigheden.  
+  * None!
 
+## API 🐒
+I made use of the following API for this project:
 
-### Oplevering & criteria
-- Presentatie met je bevindingen bij de opdrachtgever. 
-- Github met je code en readme.
+  * [Mirabeau Smart Office](https://bitbucket.org/davebitter/mirabeau-smart-office)
 
+The API uses the following online endpoint, thanks to [Dennis Wegereef](https://github.com/denniswegereef):
+
+`http://mirabeau.denniswegereef.nl/api/v1/rooms`
+
+## Research 🕵🏻
+Here I explain the research for this project.
+
+## How It Works 🛠️
+Here I explain the core features of this project.
+
+## Sources 📚
+This is a list of all the sources I used during this project:
+
+  * None!
+
+### Honourable Mentions
+
+  * [Dennis Wegereef](https://github.com/denniswegereef) for the API online endpoint
+
+## Licence 🔓
+MIT © [Bas Pieren](https://github.com/BasPieren)
