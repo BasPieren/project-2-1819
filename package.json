@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/BasPieren/project-2-1819#readme",
   "dependencies": {
+    "compression": "^1.7.4",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "nodemon": "^1.18.10",
