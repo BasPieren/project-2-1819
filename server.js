@@ -37,7 +37,5 @@ function sortData(e) {
     return (a.measurements.occupancy === b.measurements.occupancy) ? 0 : a.measurements.occupancy ? 1 : -1
   })
 
-  console.log(sortedData)
-
   return sortedData
 }
