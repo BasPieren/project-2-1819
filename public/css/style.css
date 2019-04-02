@@ -97,6 +97,7 @@ article > header > h2 {
 article > header > h2:before {
   position: absolute;
   bottom: 2.5em;
+  min-width: 71px;
   content: 'Kamer naam';
   font-size: 0.5em;
   color: #919191;
