@@ -33,9 +33,9 @@ function homePage(req, res) {
 function sortData(e) {
   let allData = e
 
-  let sortedData = allData.data.sort((a, b) => {
+  let sortedOccupancy = allData.data.sort((a, b) => {
     return (a.measurements.occupancy === b.measurements.occupancy) ? 0 : a.measurements.occupancy ? 1 : -1
   })
 
-  return sortedData
+  return sortedOccupancy
 }
