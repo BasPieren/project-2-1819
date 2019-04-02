@@ -91,7 +91,7 @@ Here I explain the core features of this project.
 ## Sources 📚
 This is a list of all the sources I used during this project:
 
-  * None!
+  * [Javascript sort array of objects by a boolean property](https://stackoverflow.com/questions/17387435/javascript-sort-array-of-objects-by-a-boolean-property)
 
 ### Honourable Mentions
 
