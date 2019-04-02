@@ -23,8 +23,21 @@ function homePage(req, res) {
     console.log('statusCode:', response && response.statusCode)
     // console.log('body:', body)
 
-    let data = JSON.parse(body)
+    let data = JSON.parse(body),
+        sortedData = sortData(data)
 
-    res.render('pages/index.ejs', {data: data.data})
+    res.render('pages/index.ejs', {data: sortedData})
   })
+}
+
+function sortData(e) {
+  let allData = e
+
+  let sortedData = allData.data.sort((a, b) => {
+    return (a.measurements.occupancy === b.measurements.occupancy) ? 0 : a.measurements.occupancy ? 1 : -1
+  })
+
+  console.log(sortedData)
+
+  return sortedData
 }
