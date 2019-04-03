@@ -26,7 +26,7 @@ function homePage(req, res) {
     let data = JSON.parse(body),
         cleanedData = cleanData(data)
 
-    console.log(cleanedData)
+    // console.log(cleanedData)
 
     res.render('pages/index.ejs', {data: cleanedData})
   })
@@ -34,19 +34,24 @@ function homePage(req, res) {
 
 function cleanData(e) {
   let allData = e.data,
-      filterData = allData.map(e => {
-        return{
+      filterData = allData.filter(e => {
+        if (e.room_name !== 'Desk area 1' && e.room_name !== 'Desk area 2') {
+          return true
+        }
+      }),
+      mapData = filterData.map(e => {
+        return {
           timestamp: e.timestamp,
           room_name: e.room_name,
           measurements: {
               mic_level: Math.round(e.measurements.mic_level / 100),
               ambient_light: e.measurements.ambient_light,
-              occupancy: e.measurements.occupancy,
+              occupancy: e.measurements.occupancy
           }
         }
       })
 
-  let sortOccupancy = filterData.sort((a, b) => {
+  let sortOccupancy = mapData.sort((a, b) => {
     return (a.measurements.occupancy === b.measurements.occupancy) ? 0 : a.measurements.occupancy ? 1 : -1
   })
 
