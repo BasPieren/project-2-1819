@@ -124,6 +124,6 @@ article > header > h2:before {
 }
 
 article > p {
-  line-height: 2;
+  line-height: 1.6;
   color: #ffffff;
 }
