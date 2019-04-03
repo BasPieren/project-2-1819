@@ -24,18 +24,31 @@ function homePage(req, res) {
     // console.log('body:', body)
 
     let data = JSON.parse(body),
-        sortedData = sortData(data)
+        cleanedData = cleanData(data)
 
-    res.render('pages/index.ejs', {data: sortedData})
+    console.log(cleanedData)
+
+    res.render('pages/index.ejs', {data: cleanedData})
   })
 }
 
-function sortData(e) {
-  let allData = e
+function cleanData(e) {
+  let allData = e.data,
+      filterData = allData.map(e => {
+        return{
+          timestamp: e.timestamp,
+          room_name: e.room_name,
+          measurements: {
+              mic_level: Math.round(e.measurements.mic_level / 100),
+              ambient_light: e.measurements.ambient_light,
+              occupancy: e.measurements.occupancy,
+          }
+        }
+      })
 
-  let sortedOccupancy = allData.data.sort((a, b) => {
+  let sortOccupancy = filterData.sort((a, b) => {
     return (a.measurements.occupancy === b.measurements.occupancy) ? 0 : a.measurements.occupancy ? 1 : -1
   })
 
-  return sortedOccupancy
+  return sortOccupancy
 }
