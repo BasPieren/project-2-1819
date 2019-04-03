@@ -1,5 +1,5 @@
 const cacheName = 'mirabeau-smart-office-cache',
-      urlsToCache = ['/', 'css/style-min.css', 'js/script.js']
+      urlsToCache = ['css/style-min.css', 'js/script.js']
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
