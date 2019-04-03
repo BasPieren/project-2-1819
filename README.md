@@ -96,6 +96,7 @@ This is a list of all the sources I used during this project:
 ### Honourable Mentions
 
   * [Dennis Wegereef](https://github.com/denniswegereef) for the API online endpoint
+  * [Jeroen van Berkum](https://github.com/jeroentvb) for help with the `cleanData()` function
 
 ## Licence 🔓
 MIT © [Bas Pieren](https://github.com/BasPieren)
