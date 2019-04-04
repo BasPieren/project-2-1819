@@ -1,6 +1,4 @@
 /* ---------- FONTS ---------- */
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700');
-
 @font-face {
   font-family: "Brando Sans Mirabeau Light";
   src: url("../fonts/Brando Sans Mirabeau/Brando-Sans-Light.woff") format("woff");
@@ -44,8 +42,20 @@
   text-shadow: 0 0 20px #d90000;
 }
 
-.fa-sun {
-  color: #ffcf00;
+.fa-lightbulb-grey {
+  color: #919191;
+}
+
+.fa-lightbulb-green {
+  color: #00CD00;
+}
+
+.fa-lightbulb-yellow {
+  color: #fefe00;
+}
+
+.fa-lightbulb-red {
+  color: #fe0000;
 }
 
 /* ---------- GENERAL ---------- */
@@ -66,6 +76,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Brando Sans Mirabeau Semi Bold', sans-serif;
 }
 
+main > h3 {
+  margin: 1em 0;
+  color: #ffffff;
+  text-align: center;
+}
+
 p {
   font-family: 'Brando Sans Mirabeau Light', sans-serif;
 }
@@ -79,18 +95,17 @@ body > header {
   align-items: center;
   padding: 0 2em;
   height: 10vh;
-  color: #ffffff;
   background-color: #56c271;
 }
 
 body > header > a {
   margin-right: auto;
-  color: #ffffff;
+  color: #24282a;
 }
 
 body > header > h2 {
   margin-right: auto;
-  color: #ffffff;
+  color: #24282a;
   font-size: 1.2em;
   text-transform: uppercase;
 }
@@ -102,9 +117,14 @@ body > header > .fas {
 /* ---------- FORM ---------- */
 
 body > header + section {
-  padding: 1em;
+  padding: 2em;
   height: fit-content;
   box-sizing: border-box;
+}
+
+body > header + section > h3 {
+  margin-bottom: 1em;
+  color: #ffffff;
 }
 
 body > header + section > form {
@@ -137,8 +157,8 @@ body > header + section > form > button {
   margin: 1.5em 0 0 0;
   padding: 1em 0;
   width: 99.5%;
-  font-family: 'Brando Sans Mirabeau Smemi Bold', sans-serif;
-  color: #ffffff;
+  font-family: 'Brando Sans Mirabeau Semi Bold', sans-serif;
+  color: #24282a;
   text-transform: uppercase;
   background-color: #56c271;
   border: none;
@@ -183,6 +203,14 @@ article > header > h2:before {
   text-transform: lowercase;
 }
 
+article > header > p {
+  margin-left: 0.5em;
+  font-family: 'Brando Sans Mirabeau Light', sans-serif;
+  font-size: 0.9em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
 article > p {
   font-size: 1.2em;
   color: #ffffff;
@@ -192,6 +220,9 @@ article > p {
 .p2-article-load-in {
   animation: article-load-in 0.2s ease-in forwards;
 }
+
+/* ---------- MEDIA QUERYS ---------- */
+
 
 /* ---------- KEYFRAMES ---------- */
 
