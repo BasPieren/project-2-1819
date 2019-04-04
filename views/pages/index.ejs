@@ -1,5 +1,17 @@
 <% include ../partials/header %>
 
+<section>
+  <form action="/filter" method="post">
+    <input type="radio" id="sound" name="filter" value="sound" hidden>
+    <label for="sound" title="Geluid"><i class="fas fa-volume-up"></i></label>
+
+    <input type="radio" id="light" name="filter" value="light" hidden>
+    <label for="light" title="Licht"><i class="fas fa-sun"></i></label>
+
+    <button type="submit" name="button">Filter</button>
+  </form>
+</section>
+
 <main>
   <% data.forEach(room => { %>
     <article>
