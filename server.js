@@ -46,23 +46,23 @@ function filterHomePage(req, res) {
         data = JSON.parse(body),
         cleanedData = cleanData(data),
         filterData = cleanedData.filter(e => {
-          if (filterValue === 'sound' && e.measurements.occupancy === false) {
+          if (filterValue === 'geluid' && e.measurements.occupancy === false) {
             return true
-          } else if (filterValue === 'light' && e.measurements.occupancy === false) {
+          } else if (filterValue === 'licht' && e.measurements.occupancy === false) {
             return true
           }
         }),
         sortData = filterData.sort((a, b) => {
-          if (filterValue === 'sound') {
+          if (filterValue === 'geluid') {
             return a.measurements.mic_level - b.measurements.mic_level
-          } else if (filterValue === 'light'){
+          } else if (filterValue === 'licht'){
             return a.measurements.ambient_light - b.measurements.ambient_light
           }
         })
 
-    // console.log(sortData)
+    // console.log(filterData)
 
-    res.render('pages/filter.ejs', {data: sortData})
+    res.render('pages/filter.ejs', {data: sortData, filterValue: filterValue})
   })
 }
 
