@@ -1,28 +1,25 @@
 const cacheName = 'mirabeau-smart-office-cache',
-      urlsToCache = ['css/style-min.css', 'js/script.js']
+      urlsToCache = ['css/style.css', 'js/script.js']
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cacheName)
-      .then(function(cache) {
-        console.log('Opened cache')
-        return cache.addAll(urlsToCache)
-      })
+      .then(cache => cache.addAll(urlsToCache))
+      .then(() => self.skipWaiting())
       .catch(err => console.error(err))
   )
-  event.waitUntil(self.skipWaiting())
 })
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
-      .then(function(response) {
+      .then(response => {
         if (response) {
           return response
         }
 
-        return fetch(event.request).then(
-          function(response) {
+        return fetch(event.request)
+        .then(response => {
             if(!response || response.status !== 200 || response.type !== 'basic') {
               return response
             }
@@ -30,7 +27,7 @@ self.addEventListener('fetch', function(event) {
             var responseToCache = response.clone()
 
             caches.open(cacheName)
-              .then(function(cache) {
+              .then(cache => {
                 cache.put(event.request, responseToCache)
               })
 
