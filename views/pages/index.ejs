@@ -1,12 +1,17 @@
 <% include ../partials/header %>
 
+<header>
+  <h2>Mirabeau Smart Office</h2>
+</header>
+
 <section>
+  <h3>Wil je minder geluid of licht?</h3>
   <form action="/filter" method="post">
-    <input type="radio" id="sound" name="filter" value="sound" hidden>
+    <input type="radio" id="sound" name="filter" value="geluid" hidden>
     <label for="sound" title="Geluid"><i class="fas fa-volume-up"></i></label>
 
-    <input type="radio" id="light" name="filter" value="light" hidden>
-    <label for="light" title="Licht"><i class="fas fa-sun"></i></label>
+    <input type="radio" id="light" name="filter" value="licht" hidden>
+    <label for="light" title="Licht"><i class="fas fa-lightbulb fa-lightbulb-grey"></i></label>
 
     <button type="submit" name="button">Filter</button>
   </form>
@@ -19,13 +24,21 @@
         <h2><%= room.room_name %></h2>
         <% if (room.measurements.occupancy === true) { %>
           <i class="fas fa-circle fa-circle-red"></i>
+          <p>Bezet</p>
         <% } else { %>
           <i class="fas fa-circle fa-circle-green"></i>
+          <p>Beschikbaar</p>
         <% } %>
       </header>
       <p><i class="fas fa-volume-up"></i> <%= room.measurements.mic_level %> dB</p>
-      <p><i class="fas fa-sun"></i> <%= room.measurements.ambient_light %> lx</p>
-    </article>
+      <% if (room.measurements.ambient_light >= 10000 && room.measurements.ambient_light < 30000) { %>
+        <p><i class="fas fa-lightbulb fa-lightbulb-green"></i> Weinig licht</p>
+      <% } else if (room.measurements.ambient_light >= 30000 && room.measurements.ambient_light < 50000) { %>
+        <p><i class="fas fa-lightbulb fa-lightbulb-yellow"></i> Iets meer licht</p>
+      <% } else { %>
+        <p><i class="fas fa-lightbulb fa-lightbulb-red"></i> Veel licht</p>
+      <% } %>
+      </article>
   <% }) %>
 </main>
 
