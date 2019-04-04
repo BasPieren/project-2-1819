@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<section>
+  <form action="/filter" method="post">
+    <input type="radio" id="sound" name="filter" value="sound" hidden>
+    <label for="sound" title="Geluid"><i class="fas fa-volume-up"></i></label>
+
+    <input type="radio" id="light" name="filter" value="light" hidden>
+    <label for="light" title="Licht"><i class="fas fa-sun"></i></label>
+
+    <button type="submit" name="button">Filter</button>
+  </form>
+</section>
+
+<main>
+  <article>
+    <header>
+      <h2><%= data[0].room_name %></h2>
+      <% if (data[0].measurements.occupancy === true) { %>
+        <i class="fas fa-circle fa-circle-red"></i>
+      <% } else { %>
+        <i class="fas fa-circle fa-circle-green"></i>
+      <% } %>
+    </header>
+    <p><i class="fas fa-volume-up"></i> <%= data[0].measurements.mic_level %> dB</p>
+    <p><i class="fas fa-sun"></i> <%= data[0].measurements.ambient_light %> lx</p>
+  </article>
+</main>
+
+<% include ../partials/footer %>
