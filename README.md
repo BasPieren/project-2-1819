@@ -2,8 +2,8 @@
 
 This is my repo the __Mirabeau Smart Office__ project.
 
-![Project Image](https://i.imgur.com/ZALRBjH.png)
-> Image description
+[Project 2 screenshot](https://i.imgur.com/D0JIbcs.png)
+> Homepage
 
 ## Table of Contents 🗃
 * [To Do](#to-do-)
